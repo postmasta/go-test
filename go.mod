@@ -2,7 +2,7 @@ module github.com/Snawoot/opera-proxy
 
 go 1.20
 
-#toolchain go1.20
+//toolchain go1.20
 
 require (
 	github.com/Snawoot/go-http-digest-auth-client v1.1.3
