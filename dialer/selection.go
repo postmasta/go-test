@@ -61,7 +61,7 @@ func SelectRandom(_ context.Context, dialers []ContextDialer) (ContextDialer, er
 	if len(dialers) == 0 {
 		return nil, errors.New("empty dialers list")
 	}
-	return dialers[rand.IntN(len(dialers))], nil
+	return dialers[rand.Intn(len(dialers))], nil
 }
 
 func probeDialer(ctx context.Context, dialer ContextDialer, url string, dlLimit int64, tlsClientConfig *tls.Config) error {
