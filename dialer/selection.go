@@ -57,6 +57,10 @@ func SelectFirst(_ context.Context, dialers []ContextDialer) (ContextDialer, err
 	return dialers[0], nil
 }
 
+func init() {
+	// Обязательно для Go 1.21, чтобы рандом был разным при каждом запуске
+	rand.Seed(time.Now().UnixNano())
+}
 func SelectRandom(_ context.Context, dialers []ContextDialer) (ContextDialer, error) {
 	if len(dialers) == 0 {
 		return nil, errors.New("empty dialers list")
