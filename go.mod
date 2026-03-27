@@ -1,6 +1,6 @@
 module github.com/Snawoot/opera-proxy
 
-go 1.23
+go 1.21
 
 //toolchain go1.20
 
