@@ -23,6 +23,8 @@ all: bin-linux-amd64 bin-linux-386 bin-linux-arm bin-linux-arm64 \
 allplus: all \
 	bin-android-arm bin-android-arm64
 
+allwin: bin-windows-amd64 bin-windows-386 bin-windows-arm64
+
 bin-native: $(OUTSUFFIX)
 bin-linux-amd64: $(OUTSUFFIX).linux-amd64
 bin-linux-386: $(OUTSUFFIX).linux-386
