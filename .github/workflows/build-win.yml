@@ -24,11 +24,8 @@ jobs:
         with:
           go-version: '1.21'
       -
-        name: Tidy
+        name: Tidy Go Modules
         run: go mod tidy
-      -
-      #  name: Tidy Go Modules
-      #  run: go mod tidy
       -
         name: Read tag
         id: tag
