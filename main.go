@@ -23,12 +23,12 @@ import (
 
 	xproxy "golang.org/x/net/proxy"
 
-	"github.com/Snawoot/opera-proxy/clock"
-	"github.com/Snawoot/opera-proxy/dialer"
-	"github.com/Snawoot/opera-proxy/handler"
-	clog "github.com/Snawoot/opera-proxy/log"
-	"github.com/Snawoot/opera-proxy/resolver"
-	se "github.com/Snawoot/opera-proxy/seclient"
+	"github.com/postmasta/go-test/clock"
+	"github.com/postmasta/go-test/dialer"
+	"github.com/postmasta/go-test/handler"
+	clog "github.com/postmasta/go-test/log"
+	"github.com/postmasta/go-test/resolver"
+	se "github.com/postmasta/go-test/seclient"
 
 )
 
