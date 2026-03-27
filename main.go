@@ -30,8 +30,6 @@ import (
 	"github.com/Snawoot/opera-proxy/resolver"
 	se "github.com/Snawoot/opera-proxy/seclient"
 
-	_ "golang.org/x/crypto/x509roots/fallback"
-	"golang.org/x/crypto/x509roots/fallback/bundle"
 )
 
 const (
