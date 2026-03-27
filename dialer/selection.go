@@ -6,7 +6,7 @@ import (
 	"errors"
 	"fmt"
 	"io"
-	"math/rand/v2"
+	"math/rand"
 	"net/http"
 	"strings"
 	"time"
@@ -55,6 +55,10 @@ func SelectFirst(_ context.Context, dialers []ContextDialer) (ContextDialer, err
 		return nil, errors.New("empty dialers list")
 	}
 	return dialers[0], nil
+}
+
+func init() {
+	rand.Seed(time.Now().UnixNano())
 }
 
 func SelectRandom(_ context.Context, dialers []ContextDialer) (ContextDialer, error) {
