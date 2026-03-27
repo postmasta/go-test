@@ -242,7 +242,7 @@ func run() int {
 			return 15
 		}
 	} else {
-		for c := range bundle.Roots() {
+		/*for c := range bundle.Roots() {
 			cert, err := x509.ParseCertificate(c.Certificate)
 			if err != nil {
 				mainLogger.Error("Unable to parse bundled certificate: %v", err)
@@ -253,7 +253,7 @@ func run() int {
 			} else {
 				caPool.AddCertWithConstraint(cert, c.Constraint)
 			}
-		}
+		}*/
 	}
 
 	xproxy.RegisterDialerType("http", proxyFromURLWrapper)
