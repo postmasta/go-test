@@ -30,7 +30,7 @@ import (
 	"github.com/postmasta/go-test/resolver"
 	se "github.com/postmasta/go-test/seclient"
 
-	_ "golang.org/x/crypto/x509roots/fallback"
+//	_ "golang.org/x/crypto/x509roots/fallback"
 	"golang.org/x/crypto/x509roots/fallback/bundle"
 )
 
