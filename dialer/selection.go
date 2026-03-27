@@ -6,7 +6,7 @@ import (
 	"errors"
 	"fmt"
 	"io"
-	"math/rand/v2"
+	"math/rand"
 	"net/http"
 	"strings"
 	"time"
@@ -57,11 +57,22 @@ func SelectFirst(_ context.Context, dialers []ContextDialer) (ContextDialer, err
 	return dialers[0], nil
 }
 
-func SelectRandom(_ context.Context, dialers []ContextDialer) (ContextDialer, error) {
+/*func SelectRandom(_ context.Context, dialers []ContextDialer) (ContextDialer, error) {
 	if len(dialers) == 0 {
 		return nil, errors.New("empty dialers list")
 	}
 	return dialers[rand.IntN(len(dialers))], nil
+}*/
+func init() {
+	// В Go 1.21 нужно инициализировать сид для рандома
+	rand.Seed(time.Now().UnixNano())
+}
+
+func SelectRandom(n int) int {
+	if n <= 0 {
+		return 0
+	}
+	return rand.Intn(n)
 }
 
 func probeDialer(ctx context.Context, dialer ContextDialer, url string, dlLimit int64, tlsClientConfig *tls.Config) error {
