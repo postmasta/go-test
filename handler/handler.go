@@ -12,8 +12,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/Snawoot/opera-proxy/dialer"
-	clog "github.com/Snawoot/opera-proxy/log"
+	"github.com/postmasta/go-test/dialer"
+	clog "github.com/postmasta/go-test/log"
 )
 
 const (
