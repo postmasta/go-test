@@ -1,6 +1,6 @@
 PROGNAME = opera-proxy
 OUTSUFFIX = bin/$(PROGNAME)
-BUILDOPTS = -a -tags netgo -trimpath -asmflags -trimpath
+BUILDOPTS = -a -tags netgo -trimpath -asmflags -trimpath -buildvcs=false
 LDFLAGS = -ldflags '-s -w -extldflags "-static"'
 LDFLAGS_NATIVE = -ldflags '-s -w'
 
