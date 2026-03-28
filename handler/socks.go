@@ -5,7 +5,7 @@ import (
 	"log"
 	"net"
 
-	"github.com/Snawoot/opera-proxy/dialer"
+	"github.com/postmasta/go-test/dialer"
 	"github.com/things-go/go-socks5"
 )
 
