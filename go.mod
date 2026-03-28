@@ -1,4 +1,4 @@
-module github.com/Snawoot/opera-proxy
+module github.com/postmasta/go-test
 
 go 1.20
 
